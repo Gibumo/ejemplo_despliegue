@@ -1,0 +1,11 @@
+services:
+  contador:
+    image: python:3.12-slim
+    container_name: contador
+    working_dir: /app
+    volumes:
+      - ./:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: ["python", "main.py"]
+    restart: "no"
